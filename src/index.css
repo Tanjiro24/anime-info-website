@@ -1,0 +1,252 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: #161616;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4.3rem;
+  color: white;
+  margin: 2rem 0px;
+}
+
+h2 {
+  font-size: 2.3rem;
+  color: white;
+  margin: 0px 20px
+}
+
+h3 {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px;
+}
+
+.pictures-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+form {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 250px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+/* Anime Card css */
+/* .anime-card {
+  display: flex;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-direction: column;
+}
+
+.anime-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+} */
+
+/* Animeitem css */
+/* .anime-item {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-width: 800px;
+  color: white;
+}
+
+.anime-item h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.anime-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.anime-details img {
+  width: 250px;
+  border-radius: 5px;
+}
+
+.anime-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.anime-info p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+
+}
+
+.anime-info span {
+  font-weight: bold;
+  color: white;
+
+}
+
+.anime-info span:last-child {
+  font-weight: normal;
+}
+
+.anime-item p {
+  margin-top: 20px;
+  line-height: 1.5;
+  color: white;
+
+}
+
+.title {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.trailer-con {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.characters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.character {
+  text-align: center;
+  max-width: 150px;
+}
+
+.character img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.character h4 {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.character p {
+  font-size: 0.9rem;
+  color: gray;
+} */
+
+/* gallery.css */
+/* .gallery {
+  margin: 20px 0;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+} */
+
+/* character css */
+/* .character-detail {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.character-detail h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.character-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.character-info img {
+  width: 250px;
+  border-radius: 5px;
+}
+
+.character-bio {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.character-bio p {
+  margin: 0;
+  line-height: 1.5;
+} */
