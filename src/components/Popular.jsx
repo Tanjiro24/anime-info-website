@@ -30,12 +30,14 @@ export function Popular({ rendered }) {
       return popularAnime?.map((anime) => (
         <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
           <img src={anime.images.jpg.large_image_url} alt={anime.title} />
+          <h4 className="sm">{anime.title}</h4>
         </Link>
       ));
     } else {
       return searchResults?.map((anime) => (
         <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
           <img src={anime.images.jpg.large_image_url} alt={anime.title} />
+          <h4 className="sm">{anime.title}</h4>
         </Link>
       ));
     }
@@ -57,14 +59,15 @@ export function Popular({ rendered }) {
 const PopularStyled = styled.div`
   display: flex;
   position: relative;
-  
+
   .popular-anime {
     margin-top: 2rem;
     padding: 2rem 1rem;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 1rem;
+    row-gap: 5rem;
+    column-gap: 3rem;
     background-color: #141619;
     border-top: 5px solid #27ae60;
 
@@ -76,12 +79,12 @@ const PopularStyled = styled.div`
     @media screen and (max-width: 480px) {
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       padding: 1.5rem 0.5rem;
-      grid-gap: 1.5rem;
+      grid-gap: 7.5rem;
     }
 
     a {
-      height: 500px;
-      border-radius: 7px;
+      height: 450px;
+      /* border-radius: 7px; */
       border: 5px solid #fff;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -89,6 +92,13 @@ const PopularStyled = styled.div`
       &:hover {
         transform: scale(1.05);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .sm {
+        font-size: 1rem;
+        color: white;
+        font-weight: bold;
+        margin-top: 5px
       }
 
       @media screen and (max-width: 768px) {
@@ -102,7 +112,7 @@ const PopularStyled = styled.div`
       img {
         width: 100%;
         height: 100%;
-        border-radius: 5px;
+        /* border-radius: 5px; */
       }
     }
   }
