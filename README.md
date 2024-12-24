@@ -4,7 +4,7 @@
 This is a React-based Anime Information Website where users can search and explore different anime series and their details. The website is designed to provide information such as ratings, descriptions, images, and more for a variety of anime shows.
 
 ## Screenshot of the website
-(https://github.com/user-attachments/assets/920c6cad-e0db-4fa6-a76e-2a864e6efe57)
+![image alt](https://github.com/user-attachments/assets/920c6cad-e0db-4fa6-a76e-2a864e6efe57)
 )
 
 ## Features
