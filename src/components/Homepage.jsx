@@ -144,6 +144,11 @@ const HomepageStyled = styled.div`
         flex-direction: column;
         gap: 0.5rem;
       }
+      
+      @media screen and (max-width: 835px) {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
 
       button {
         display: flex;
