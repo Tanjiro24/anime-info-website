@@ -11,7 +11,6 @@ export function Homepage() {
     loading,
     handleSubmit,
     search,
-    // searchAnime,
     handleChange,
     getUpcomingAnime,
     getAiringAnime,
@@ -19,6 +18,15 @@ export function Homepage() {
   } = useGlobalContext();
 
   const [rendered, setRendered] = useState("popular");
+
+  // Fetch data when switching filters
+  const handleFilterClick = (filter) => {
+    setRendered(filter); // Update the state for rendering
+    if (filter === "popular") getPopularAnime();
+    if (filter === "airing") getAiringAnime();
+    if (filter === "upcoming") getUpcomingAnime();
+    handleChange({ target: { value: "" } }); // Clear the search input
+  };
 
   const switchComponent = () => {
     switch (rendered) {
@@ -36,7 +44,7 @@ export function Homepage() {
   if (loading) {
     return (
       <div className="loading">
-        <img src={Loading} alt="loading.gif" />
+        <img src={Loading} alt="Loading" />
       </div>
     );
   }
@@ -55,12 +63,7 @@ export function Homepage() {
         </div>
         <div className="search-container">
           <div className="filter-btn popular-filter">
-            <button
-              onClick={() => {
-                setRendered("popular");
-                getPopularAnime();
-              }}
-            >
+            <button onClick={() => handleFilterClick("popular")}>
               Popular <i className="fas fa-fire"></i>
             </button>
           </div>
@@ -76,22 +79,12 @@ export function Homepage() {
             </div>
           </form>
           <div className="filter-btn airing-filter">
-            <button
-              onClick={() => {
-                setRendered("airing");
-                getAiringAnime();
-              }}
-            >
+            <button onClick={() => handleFilterClick("airing")}>
               Airing
             </button>
           </div>
           <div className="filter-btn upcoming-filter">
-            <button
-              onClick={() => {
-                setRendered("upcoming");
-                getUpcomingAnime();
-              }}
-            >
+            <button onClick={() => handleFilterClick("upcoming")}>
               Upcoming
             </button>
           </div>
@@ -121,9 +114,6 @@ const HomepageStyled = styled.div`
     }
 
     .logo {
-      /* display: flex;
-      align-items: center;
-      justify-content: center; */
       margin-bottom: 2rem;
       text-align: center;
 
@@ -225,27 +215,6 @@ const HomepageStyled = styled.div`
               padding: 0.5rem 1rem;
             }
           }
-        }
-      }
-    }
-  }
-
-  /* Small screen adjustments */
-  @media screen and (max-width: 480px) {
-    header {
-      padding: 1rem;
-
-      .search-container {
-        flex-direction: column;
-        gap: 0.5rem;
-
-        form .input-control input {
-          padding: 0.5rem;
-        }
-
-        button {
-          font-size: 0.9rem;
-          padding: 0.5rem 0.8rem;
         }
       }
     }
